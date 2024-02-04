@@ -24,6 +24,123 @@
     flex-shrink: 0;
 }
 
+.simply-card-list {
+    display: flex;
+    width: 1136px;
+    align-items: flex-start;
+    gap: 19px;
+}
+
+.simply-card-image {
+    height: 214px;
+    width: 206px;
+}
+
+.simply-card-link {
+    display: flex;
+    padding: 28px 36px 28px 28px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    width: 270px;
+    height: 270px;
+}
+
+.milk-chocolate {
+    border-radius: 15px;
+    background: #FD9222;
+}
+
+.simply-milk {
+    border-radius: 15px;
+    border: 1px solid #FD9222;
+    background: #FFF;
+}
+
+.nuts {
+    border-radius: 15px;
+    background: #1E1823;
+}
+ 
+.sweet-choco{
+    border-radius: 15px;
+    border: 1px solid #FD9222;
+    background: #FFF;
+}
+
+.chocnuts {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+        /* 128.571% */
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+}
+
+.milk-choco {
+    background: url(<path-to-image>), lightgray 1.11px -18.452px / 98.551% 125.758% no-repeat;
+}
+
+.milky-milk {
+    background: url(<path-to-image>), lightgray 5.779px -13.594px / 94.131% 117.796% no-repeat;
+}
+
+.milk {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+        /* 128.571% */
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+}
+
+.simply-nuts {
+    background: url(<path-to-image>), lightgray -19.938px 16.37px / 128.738% 82.54% no-repeat;
+}
+
+.simply-card-name {
+    margin-top: 36px;
+}
+
+.simply-sweet {
+    background: url(<path-to-image>), lightgray 4.715px -10.34px / 90.751% 115.245% no-repeat;
+}
+
+.simply-image-paragraph {
+ /*   overflow: hidden;  */
+    color: #111;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 128.571% */
+    letter-spacing: -0.28px;
+    max-width: 230px;
+    height: 162px;
+    flex-shrink: 0;
+    text-decoration: none;
+    gap: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+
+
 .simply-simple-taste {
     color: #FD9222;
     font-family: Montserrat;
@@ -76,97 +193,82 @@
     margin: 0;
 }
 
-.simply-card-link {
-    display: flex;
-    padding: 28px 36px 28px 28px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 15px;
-    gap: 36px;
-}
-
-.milk-chocolate {
-    display: flex;
-    padding: 28px 36px 28px 28px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: #FD9222;
-    gap: 36px;
-}
-
 .milk,
 .sweet-choco {
     background: #FFF;
 }
 
-.nuts {
-    background: #1E1823;
+.simply-card-image,
+.simply-image-paragraph {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    backface-visibility: hidden;
 }
 
-.milk {
-    color: #111;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-        /* 128.571% */
-    letter-spacing: -0.28px;
-    text-transform: uppercase;
+.simply-image-paragraph {
+    background-color: #FFF;
+    transform: translateY(-100%) scale(.9);
+    z-index: 1;
 }
 
-.simply-card-image {
-    overflow: hidden;
-    color: #111;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-        /* 128.571% */
-    letter-spacing: -0.28px;
-    max-width: 230px;
-    height: 162px;
-    flex-shrink: 0;
-    text-decoration: none;
-    background-color: #FD9222;
-    gap: 36px;
-    margin: 0 auto;
-    justify-content: center;
-    background: url(<path-to-image>), lightgray 1.11px -18.452px / 98.551% 125.758% no-repeat;
+.simply-card-link{
+    transform-style: preserve-3d;
+    transform-origin: center;
+        /* Preserve 3D transformations */
+    transition: transform 0.5s;
 }
 
-.chocnuts {
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-        /* 128.571% */
-    letter-spacing: -0.28px;
-    text-transform: uppercase;
-    margin: 0;
+.simply-card-link:hover {
+    transform: rotateY(180deg);
 }
 
-.simply-card-list {
-    display: flex;
-    width: 1136px;
-    align-items: flex-start;
-    gap: 19px;
+.simply-card-link:hover  .simply-image-paragraph {
+    transform: rotateY(180deg);
 }
 
+.simply-card-link:hover .simply-image-paragraph {
+    transform: rotateY(0deg);
+    opacity: 1;
+    transform: translateY(0)scale(1) ;
+}
 .simply-card-name {
     text-decoration: none;
 }
 
-.simply-choco-cards {
-    display: flex;
-    width: 1136px;
-    align-items: flex-start;
-    gap: 19px;
+.simply-image-paragraph {
+    display: none;
 }
+
+.simply-card-link:hover .simply-image-paragraph {
+    display: block;
+}
+
+
+.simply-image-paragraph {
+    transform: rotateY(180deg);
+}
+
+.simply-milk-chocolate {
+    display: flex;
+    width: 230px;
+    height: 230px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+}
+
+.how-it-made {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+
